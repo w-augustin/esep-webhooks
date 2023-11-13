@@ -18,7 +18,6 @@ public class Function
     /// <returns></returns>
     public string FunctionHandler(object input, ILambdaContext context)
     {
-        //default template from instructor
         dynamic json = JsonConvert.DeserializeObject<dynamic>(input.ToString());
         
         string payload = $"{{'text':'Issue Created: {json.issue.html_url}'}}";
